@@ -1,0 +1,8 @@
+{
+    "serverPort" : 5000,
+    "dbUrl": "mongodb+srv://Tihon:123123123@cluster0.d5opn.mongodb.net/cloud-disk?retryWrites=true&w=majority",
+    "secretKey": "123",
+    "filePath": "D:\\React Disk\\server\\files",
+    "staticPath": "D:\\React Disk\\server\\static"
+  }
+  

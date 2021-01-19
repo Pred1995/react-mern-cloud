@@ -1,0 +1,212 @@
+@import '../../utils/colors.scss';
+
+.disk {
+    margin-top: 20px;
+    &__back {
+      width: 55px;
+      height: 34px;
+      border-radius: 37px;
+      border: 1px solid black;
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+    &__btns { 
+        display: flex;
+    }
+    &__create {
+        margin-left: 10px;
+        border-radius: 14px;
+        border: 1px solid black;
+        padding: 9px 8px;
+        &:hover {
+          transform: scale(1.02);
+        }
+    }
+    &__select {
+        margin-left: auto;
+    }
+
+    &__upload-input {
+        display: none;
+    }
+    &__upload-label {
+        border: 2px dashed $font-color;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin-left: 10px;
+        display: block;
+    }
+    &__list, &__plate {
+      align-self: center;
+      height: 20px;
+      width: 20px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: no-repeat center center;
+      background-size: contain;
+      margin: 0 10px;
+    }
+    &__list {
+      background-image: url("../../assets/img/list.svg");
+    }
+    &__plate {
+      background-image: url("../../assets/img/Union.svg");
+    }
+}
+
+.popup {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        width: 400px;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__create {
+        border-radius: 14px;
+        border: 1px solid black;
+        padding: 9px 8px;
+        align-self: flex-end;
+    }
+
+    &__title {
+         font-size: 18px;
+    }
+
+    &__close {
+        border-radius: 14px;
+        width: 30px;
+        border: 1px solid black;
+        padding: 5px 4px;
+    }
+
+    &__input {
+        padding: 9px 8px;
+        border-bottom: 1px solid black;
+    }
+
+
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+    input {
+        margin: 20px 0px;
+    }
+}
+
+.loader {
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 250px);
+}
+
+.drop-area {
+    width: 100%;
+    height: calc(100vh - 55px - 40px);
+    margin: 20px;
+    border: dashed $font-color 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
+
+.lds-spinner {
+    color: official;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-spinner div {
+    transform-origin: 40px 40px;
+    animation: lds-spinner 1.2s linear infinite;
+  }
+  .lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 6px;
+    height: 18px;
+    border-radius: 20%;
+    background: #fff;
+  }
+  .lds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+  }
+  .lds-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+  }
+  .lds-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+  }
+  .lds-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+  }
+  .lds-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+  }
+  .lds-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+  }
+  .lds-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+  }
+  .lds-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+  }
+  .lds-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+  }
+  .lds-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+  }
+  .lds-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+  }
+  .lds-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+  }
+  @keyframes lds-spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
